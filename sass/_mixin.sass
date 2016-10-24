@@ -1,0 +1,44 @@
+@mixin size($thisWidth,$thisHeight)
+	width: $thisWidth
+	height: $thisHeight
+
+@mixin position($thisTop,$thisLeft)
+	position: relative
+	top     : $thisTop
+	left    : $thisLeft
+
+@mixin position-absolute($thisTop,$thisLeft)
+	position: absolute     
+	top     : $thisTop
+	left    : $thisLeft	
+
+@mixin text($fontSize,$fontColor,$letterSpacing)
+	font-size     : $fontSize
+	color         : $fontColor
+	letter-spacing: $letterSpacing
+
+@mixin bg($img)   
+	background       : image-url($img)  
+	width            : image-width($img)  
+	height           : image-height($img)  
+	background-repeat: no-repeat
+
+@mixin grid($cloumNumber,$cloumGutter)
+	margin-right: $cloumGutter
+
+	&:nth-child(#{$cloumNumber}n)
+		margin-right: 0
+
+@mixin grid-bottom($cloumNumber,$cloumGutter)
+	margin-bottom: $cloumGutter
+
+	&:nth-child(#{$cloumNumber}n)
+		margin-bottom: 0
+
+@mixin circle($thisWidth,$thisHeight)
+	+border-radius(100%)
+	transform        : rotate(-16deg)
+	-webkit-transform: rotate(-16deg)
+	width            : $thisWidth
+	height           : $thisHeight
+	text-align       : center

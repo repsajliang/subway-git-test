@@ -1,0 +1,437 @@
+@import variable
+@import mixin
+@import reset
+@import compass/css3
+@import compass
+@import extend
+@import default
+@import fonts
+@import flexboxgrid
+@import video
+@import animate
+
+// 以下為0~15s
+// 上半
+.h1-chicken
+	+text(88px,$fontColor,$letterSpacing)  
+	+position-absolute(0,none)
+	+bg("tag-big.png")
+	+box-sizing(border-box)
+	padding: 30px 5px 0 0
+	text-align: right
+	right  : 0
+	font-family: Title
+
+	.en
+		letter-spacing: 4px
+		font-weight   : lighter		
+
+.h2-chicken
+	+text(48px,$circleSmallColor,-2.5px)  
+	+position-absolute(170px,none)
+	right: 20px
+	font-family: Title
+	
+	.en 
+		+text(52px,$circleSmallColor,$letterSpacing)  
+
+.h3-chicken
+	+text(12px,$circleSmallColor,0)  
+	+position-absolute(220px,none)
+	right     : 20px
+	text-align: right
+	font-family: Title
+	
+.sandwich-big
+	+bg("chicken-terriyaki.png")
+	+position-absolute(127px,57px)
+	z-index         : 1	
+
+	.detail
+		+position(475px,25px)
+		+text(19px,$fontColor,0) 
+		font-family: ContentText
+
+		.en
+			margin-top : 5px
+
+.tag-medium-chicken
+	+text(63px,$fontColor,0)  
+	+bg("tag-medium.png")
+	+box-sizing(border-box)
+	+position-absolute(323px,825px)	
+	padding    : 18px 155px 0 0
+	text-align : right
+	font-family: Title
+	font-weight: lighter
+
+	.en 
+		+text(45px,$fontColor,$letterSpacing)  
+		display    : block
+
+.circle-lite
+	+circle(110px,110px)
+	+position-absolute(260px,880px)		
+	+box-sizing(border-box)
+	+text(22px,white,$letterSpacing)
+	font-family     : ContentText
+	font-weight     : 100
+	background-color: $circleSmallColor
+	padding-top     : 48px
+
+.circle-price-chicken
+	+circle(274px,274px)
+	+position-absolute(320px,1366px)			
+	+box-sizing(border-box)
+	+text(28px,$fontColor,$letterSpacing)
+	background-color: $circleBigColor
+	padding-top     : 58px
+	z-index         : 2
+
+	.unit
+		+text(65px,$fontColor,$letterSpacing)
+		display: inline
+
+	.number
+		+text(120px,$fontColor,$letterSpacing)
+		+position(0,-5px)				
+		display: inline
+		font-family  : Price
+
+	.name
+		+text(30px,$fontColor,$letterSpacing)
+		margin-bottom: 5px
+		font-family: ContentText
+
+	.detail
+		+text(18px,$fontColor,$letterSpacing)
+		+position(0,0)			
+		font-family  : Price
+
+// 下半
+.row-chicken
+	+position(667px,0)
+
+	.item
+		width: 580px
+
+		.circle-lite
+			+circle(63px,63px)
+			+position(101px,435px)		
+			+box-sizing(border-box)
+			+text(12px,white,$letterSpacing)
+			font-family     : ContentText
+			font-weight     : 100
+			background-color: $circleSmallColor
+			padding-top     : 27px
+
+	.item:nth-child(1)
+		margin-left: 65px	
+	.item:nth-child(2)
+		margin-left: 70px
+	.item:nth-child(3)
+		margin-left: 45px		
+
+	.subway-1
+		+bg("roasted-chicken.png")
+
+	.subway-2
+		+bg("chicken-meatball.png")	
+
+	.subway-3
+		+bg("sliced-chicken.png")		
+
+	.detail
+		+position(5px,5px)
+		+text(12px,$fontColor,0) 
+		font-family: ContentText
+
+		.en
+			margin-top : 5px
+
+	.size	
+		object-fit: contain
+		height: 232px
+
+	.circle-price
+		+circle(152px,152px)
+		+position(-178px,424px)			
+		+box-sizing(border-box)
+		+text(28px,$fontColor,$letterSpacing)
+		background-color: $circleBigColor
+		padding-top     : 20px
+		z-index         : 2
+
+		.unit
+			+text(41px,$fontColor,$letterSpacing)
+			display: inline
+
+		.number
+			+text(65px,$fontColor,$letterSpacing)
+			+position(0,-5px)				
+			display    : inline
+			font-family: Price											
+
+		.name
+			+text(19px,$fontColor,$letterSpacing)
+			font-family: ContentText
+
+		.detail
+			+text(11px,$fontColor,$letterSpacing)
+			+position(0,-1px)				
+			font-family     : Price						
+
+	.tag-small		
+		+text(35px,$fontColor,0)  
+		+bg("tag-small.png")
+		+box-sizing(border-box)
+		+position(-27px,100px)	
+		padding    : 8px 73px 0 0
+		text-align : right
+		font-family: Title
+
+		.en 
+			+text(31px,$fontColor,$letterSpacing)  
+			display    : block
+
+.tag-no-picture
+	+position-absolute(none,none)
+	right: 170px	
+	bottom: -17px		
+
+	.detail
+		+position(5px,-25px)
+		+text(12px,$fontColor,0) 
+
+		.en
+			margin-top : 5px
+
+
+	.circle-price
+		+circle(80px,80px)
+		+position(-106px,460px)			
+		+box-sizing(border-box)
+		+text(28px,$fontColor,$letterSpacing)
+		background-color: $circleBigColor
+		padding-top     : 10px
+		z-index         : 2
+
+		.unit
+			+text(20px,$fontColor,$letterSpacing)
+			display: inline
+
+		.number
+			+text(40px,$fontColor,-1.5px)
+			+position(0,-7px)				
+			display: inline
+			font-family: Price											
+
+		.name
+			+text(10px,$fontColor,$letterSpacing)
+			font-family: ContentText
+
+		.detail
+			+text(6px,$fontColor,$letterSpacing)
+			+position(0,-1px)				
+			font-family     : Price						
+
+	.tag-small		
+		+text(35px,$fontColor,0)  
+		+bg("tag-small.png")
+		+box-sizing(border-box)
+		// +position(-27px,100px)	
+		padding    : 8px 73px 0 0
+		text-align : right
+		font-family: Title
+
+		.en 
+			+text(31px,$fontColor,$letterSpacing)  
+			font-weight: lighter
+			display    : block
+
+// 以下為15~20s
+// 上半
+.h1-Turkey
+	+text(88px,$fontColor,$letterSpacing)  
+	+position-absolute(0,none)
+	+bg("tag-big.png")
+	+box-sizing(border-box)
+	padding    : 30px 50px 0 0
+	text-align : right
+	right      : 0
+	font-family: Title
+
+	.en
+		letter-spacing: 4px
+		font-weight   : lighter
+
+.h2-Turkey
+	+text(48px,$circleSmallColor,-2.5px)  
+	+position-absolute(170px,none)
+	right      : 20px
+	font-family: Title
+
+	.en 
+		+text(52px,$circleSmallColor,$letterSpacing)  
+
+.h3-Turkey
+	+text(12px,$circleSmallColor,0)  
+	+position-absolute(220px,none)
+	right     : 20px
+	text-align: right
+	font-family: Title
+	
+.sandwich-big-tuna
+	+bg("tuna.png")
+	+position-absolute(152px,93px)
+	z-index         : 1	
+
+	.detail
+		+position(475px,25px)
+		+text(19px,$fontColor,0) 
+		font-family: Title
+		
+		.en
+			margin-top : 5px
+
+
+.tag-medium-Turkey
+	+text(67px,$fontColor,0)  
+	+bg("tag-medium.png")
+	+box-sizing(border-box)
+	+position-absolute(323px,825px)	
+	padding: 10px 165px 0 0
+	text-align: right
+	font-family: Title
+
+	.en 
+		+text(38px,$fontColor,2px)  
+		margin-top: 10px
+		display   : block
+
+.circle-price-Turkey
+	+circle(274px,274px)
+	+position-absolute(320px,1366px)			
+	+box-sizing(border-box)
+	+text(28px,$fontColor,$letterSpacing)
+	background-color: $circleBigColor
+	padding-top     : 58px
+	z-index         : 2
+
+	.unit
+		+text(65px,$fontColor,$letterSpacing)
+		display: inline
+
+	.number
+		+text(120px,$fontColor,$letterSpacing)
+		+position(0,-5px)	
+		font-family: Price					
+		display: inline
+
+	.name
+		+text(30px,$fontColor,$letterSpacing)
+		margin-bottom: 5px
+		font-family  : Title
+
+	.detail
+		+text(18px,$fontColor,$letterSpacing)
+		+position(0,0)			
+		font-family: Price
+
+// 下半
+.row-turkey
+	+position(667px,0)
+
+	.item
+		width: 588px
+
+		.circle-lite
+			+circle(63px,63px)
+			+position(113px,440px)		
+			+box-sizing(border-box)
+			+text(12px,white,$letterSpacing)
+			font-family     : ContentText
+			font-weight     : lighter
+			background-color: $circleSmallColor
+			padding-top     : 27px
+
+	.item:nth-child(1)
+		margin-left: 95px	
+	.item:nth-child(2)
+		margin-left: 36px
+	.item:nth-child(3)
+		margin-left: 18px		
+
+	.subway-1
+		+bg("turkey-breast.png")
+
+	.subway-2
+		+bg("turkey-breast-ham.png")	
+
+	.subway-3
+		+bg("veggie.png")		
+
+	.detail
+		+position(5px,5px)
+		+text(12px,$fontColor,0) 
+		font-family: ContentText
+
+		.en
+			margin-top : 5px
+
+	.blank
+		height: 29px		
+
+	.size	
+		object-fit: contain
+		height: 244px
+
+	.circle-price
+		+circle(152px,152px)
+		+position(-178px,428px)			
+		+box-sizing(border-box)
+		+text(28px,$fontColor,$letterSpacing)
+		background-color: $circleBigColor
+		padding-top     : 25px
+		z-index         : 2
+
+		.unit
+			+text(41px,$fontColor,$letterSpacing)
+			display: inline
+
+		.number
+			+text(65px,$fontColor,$letterSpacing)
+			+position(0,-15px)	
+			font-family: Price								
+			display: inline
+
+		.name
+			+text(19px,$fontColor,$letterSpacing)
+			font-family: Title
+
+		.detail
+			+text(11px,$fontColor,$letterSpacing)
+			+position(0,-1px)				
+			font-family     : Price						
+
+	.tag-small		
+		+text(35px,$fontColor,0)  
+		+bg("tag-small.png")
+		+box-sizing(border-box)
+		+position(-27px,100px)	
+		padding: 8px 75px 0 0
+		text-align: right
+		font-family: Title
+
+		.en 
+			+text(31px,$fontColor,$letterSpacing)  
+			display    : block
+
+		.long	
+			+position(none,-35px)	
+
+		.copyright
+			+text(16px,$fontColor,0) 
+			vertical-align: super 
+				
+

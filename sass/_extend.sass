@@ -1,0 +1,17 @@
+// @extend
+%clearfix
+	&:before
+		content: ""
+		display: table
+	&:after
+		content: ""
+		display: table
+		clear: both
+	zoom: 1
+	
+%price-list
+	+box-sizing(border-box)	
+	font-size: 24px
+	padding: 17px 10px 8px 12px	
+	height: 520px
+	

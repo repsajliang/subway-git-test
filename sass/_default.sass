@@ -1,0 +1,37 @@
+﻿body
+	font-family: ItemName
+	font-weight: bolder
+	
+@media only screen and (max-width: 1920px)
+	.hide-1screen 
+		visibility: hidden !important
+		display: none !important
+		
+.layer1
+	+position-absolute(0,0)
+	+bg("bg.jpg")
+	width: $boxWidth
+	height: $boxHeight
+	overflow: hidden
+
+.layer2
+	+position-absolute(0,0)
+	width: $boxWidth
+	height: $boxHeight
+	overflow: hidden
+	z-index: 99	
+
+.layer3
+	+position-absolute(0,0)
+	+bg("bg.jpg")	
+	width: $boxWidth
+	height: $boxHeight
+	overflow: hidden
+	z-index: 999
+	
+// 輪播
+.switch1 
+	@extend %switch1 
+
+.switch2 
+	@extend %switch2 	 
